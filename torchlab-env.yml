@@ -1,0 +1,27 @@
+name: torchlab
+channels:
+- pytorch
+- conda-forge
+dependencies:
+- python=3.8
+- pip
+- pytorch
+- torchvision
+- cudatoolkit=10.2
+- ignite
+- scikit-learn
+- scikit-image
+- matplotlib
+- seaborn
+- pandas
+- pyyaml
+- mako
+- pip:
+  - jupyter
+  - sacred
+  - incense
+  - tqdm
+  - pymongo
+  - tinydb
+  - tinydb-serialization
+  - hashfs

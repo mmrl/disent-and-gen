@@ -1,0 +1,182 @@
+######################## Shapes 3D ############################
+shapes3d:
+  r2e:
+    leave1out:
+      dataset: 'shapes3d'
+      condition: 'recomb2element'
+      variant: 'leave1out'
+      sims_root: '../data/sims/disent/shapes3d/'
+      sims_ids: [14, 15, 16, 43, 44, 45]
+      model_names:
+        - VAE
+        - β-VAE(β=8)
+        - β-VAE(β=12)
+        - FactorVAE(γ=20)
+        - FactorVAE(γ=50)
+        - FactorVAE(γ=100)
+      gt_dec_id: 132
+
+  r2r:
+    shp2objh:
+      dataset: 'shapes3d'
+      condition: 'recomb2range'
+      variant: 'shape2ohue'
+      sims_root: '../data/sims/disent/shapes3d/'
+      sims_ids: [35, 37, 39, 29, 31, 33]
+      model_names:
+        - VAE
+        - β-VAE(β=8)
+        - β-VAE(β=12)
+        - FactorVAE(γ=20)
+        - FactorVAE(γ=50)
+        - FactorVAE(γ=100)
+      gt_dec_id: 170
+
+  extrp:
+    floorh_50:
+      dataset: 'shapes3d'
+      condition: 'extrp'
+      variant: 'fhue_gt50'
+      sims_root: '../data/sims/disent/shapes3d/'
+      sims_ids: [11, 12, 13, 40, 41, 42]
+      model_names:
+        - VAE
+        - β-VAE(β=8)
+        - β-VAE(β=12)
+        - FactorVAE(γ=20)
+        - FactorVAE(γ=50)
+        - FactorVAE(γ=100)
+      gt_dec_id: 120
+
+########################### Dsprites ############################
+
+dsprites:
+  r2e:
+    leave1out:
+      dataset: 'dsprites'
+      condition: 'recomb2element'
+      variant: 'leave1out'
+      sims_root: '../data/sims/disent/dsprites/'
+      sims_ids: [58, 59, 60, 9, 10, 11] # First half from database
+      model_names:
+        - VAE
+        - β-VAE(β=8)
+        - β-VAE(β=12)
+        - FactorVAE(γ=20)
+        - FactorVAE(γ=50)
+        - FactorVAE(γ=100)
+      gt_dec_id: 175
+
+  r2r:
+    shape2tx:
+      dataset: 'dsprites'
+      condition: 'recomb2range'
+      variant: 'shape2tx'
+      sims_root: '../data/sims/disent/dsprites/'
+      sims_ids: [39, 85, 2, 6, 7, 8] # First 2 from database
+      model_names:
+        - VAE
+        - β-VAE(β=8)
+        - β-VAE(β=12)
+        - FactorVAE(γ=20)
+        - FactorVAE(γ=50)
+        - FactorVAE(γ=100)
+      gt_dec_id: 174
+
+  extrp:
+    blank_side:
+      dataset: 'dsprites'
+      condition: 'extrp'
+      variant: 'blank_side'
+      sims_root: '../data/sims/disent/dsprites/'
+      sims_ids: [26, 69, 29, 3, 4, 5] # First half from database
+      model_names:
+        - VAE
+        - β-VAE(β=8)
+        - β-VAE(β=12)
+        - FactorVAE(γ=20)
+        - FactorVAE(γ=50)
+        - FactorVAE(γ=100)
+      gt_dec_id: 173
+
+
+################################# MPI3D #######################################
+
+mpi3d:
+  r2e:
+    leave1out:
+      dataset: mpi3d
+      condition: recomb2element
+      variant: leave1out
+      sims_root: '../data/sims/disent/mpi_real/'
+      sims_ids: [200, 201, 202, 203, 204, 205] # First half from database
+      model_names:
+        - VAE
+        - β-VAE(β=8)
+        - β-VAE(β=12)
+        - FactorVAE(γ=20)
+        - FactorVAE(γ=50)
+        - FactorVAE(γ=100)
+      gt_dec_id: 14
+
+  r2r:
+    cyl2horz:
+      dataset: mpi3d
+      condition: recomb2range
+      variant: cyl2horz
+      sims_root: '../data/sims/disent/mpi_real/'
+      sims_ids: [188, 199, 192, 194, 196, 198] # First half from database
+      model_names:
+        - VAE
+        - β-VAE(β=8)
+        - β-VAE(β=12)
+        - FactorVAE(γ=20)
+        - FactorVAE(γ=50)
+        - FactorVAE(γ=100)
+      gt_dec_id: 17
+
+    objc2horz:
+      dataset: mpi3d
+      condition: recomb2range
+      variant: objc2horz
+      sims_root: '../data/sims/disent/mpi_real/'
+      sims_ids: [189, 191, 193, 195, 197, 199] # First half from database
+      model_names:
+        - VAE
+        - β-VAE(β=8)
+        - β-VAE(β=12)
+        - FactorVAE(γ=20)
+        - FactorVAE(γ=50)
+        - FactorVAE(γ=100)
+      gt_dec_id: 18
+
+  extrp:
+    horz_gt20:
+      dataset: mpi3d
+      condition: extrp
+      variant: horz_gt20
+      sims_root: '../data/sims/disent/mpi_real/'
+      sims_ids: [176, 178, 180, 182, 184, 186]
+      model_names:
+        - VAE
+        - β-VAE(β=8)
+        - β-VAE(β=12)
+        - FactorVAE(γ=20)
+        - FactorVAE(γ=50)
+        - FactorVAE(γ=100)
+      gt_dec_id: 2
+
+    objc3:
+      dataset: mpi3d
+      condition: extrp
+      variant:  objc_gt3
+      sims_root: '../data/sims/disent/mpi_real/'
+      sims_ids: [177, 179, 181, 183, 185, 187]
+      model_names:
+        - VAE
+        - β-VAE(β=8)
+        - β-VAE(β=12)
+        - FactorVAE(γ=20)
+        - FactorVAE(γ=50)
+        - FactorVAE(γ=100)
+      gt_dec_id: 3
